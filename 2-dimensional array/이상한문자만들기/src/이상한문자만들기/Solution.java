@@ -1,13 +1,8 @@
 package 이상한문자만들기;
 
+
 public class Solution {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Solution s=new Solution();
-		System.out.println(s.solution("try Hello wORL sD sssssSSEE"));
-
-	}
 	
 	public String solution(String s) {
 		
