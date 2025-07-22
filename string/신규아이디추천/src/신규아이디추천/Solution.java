@@ -1,24 +1,15 @@
-package 신규아이디추천;
+//package 신규아이디추천;
 
 public class Solution {
 
-	public static void main(String[] args) {
-		Solution s=new Solution();
-		System.out.println( s.solution("...!@BaT#..y.abcdefghijklm"));
-	}
-	
+//	public static void main(String[] args) {
+//		Solution s=new Solution();
+//		System.out.println( s.solution("...!@BaT#..y.abcdefghijklm"));
+//	}
+//	
 	public String solution(String new_id) {
 		
-		boolean check=validCheck(new_id);
-		
-		if(check) {
-			return new_id;
-		}
-		else
-		{
-			String rename=recommand(new_id);
-			return rename;
-		}
+		return recommand(new_id);
 		
 	}
 	
@@ -28,18 +19,17 @@ public class Solution {
 		System.err.println("step1 : "+step1);
 		
 		//step2
-		String step2=step1.replaceAll("[^a-z^A-Z^1-9^\\.^-^_]", "");
+		String step2=step1.replaceAll("[^a-z0-9\\._-]", "");
 		System.err.println("step2 : "+step2);
 		//step3
 		String step3=step2.replaceAll("\\.{2,}", ".");
 		System.err.println("step3 : "+step3);
 		//step4
-		String step4_1=step3.replaceAll("^\\.", "");
-		System.err.println("step4-1 : "+step4_1);
-		String step4_2=step4_1.replaceAll("\\.$", "");
-		System.err.println("step4-2 : "+step4_2);
+		String step4=step3.replaceAll("^\\.|\\.$", "");
+		System.err.println("step4: "+step4);
 		
-		String step5=step4_2;
+		
+		String step5=step4;
 		if(step5.isEmpty()) {
 			step5="a";
 		}
@@ -49,10 +39,7 @@ public class Solution {
 		
 		if(step6.length()>=16) {
 			step6=step6.substring(0, 15);
-			
-			if(step6.endsWith(".")) {
-				step6.replaceAll("\\.$", "");
-			}
+			step6=step6.replaceAll("\\.+$", "");
 		}
 		System.err.println("step6 : "+step6);
 		
@@ -66,20 +53,20 @@ public class Solution {
 		
 		return step7;
 	}
-	
-	public boolean validCheck(String s) {
-		if(!s.matches(".{3,15}")) {
-			return false;
-		}
-		else if(s.matches("[^a-z^A-Z^1-9^\\.^-^_]+")) {
-			return false;
-		}
-		else if(s.startsWith(".")||s.endsWith(".")) {
-			return false;
-		}else if(s.matches(".*\\.{2,}.*")){
-			return false;
-		}
-		return true;
-	}
+//	
+//	public boolean validCheck(String s) {
+//		if(!s.matches(".{3,15}")) {
+//			return false;
+//		}
+//		else if(s.matches("[^a-z0-9\\._-]+")) {
+//			return false;
+//		}
+//		else if(s.startsWith(".")||s.endsWith(".")) {
+//			return false;
+//		}else if(s.matches(".*\\.{2,}.*")){
+//			return false;
+//		}
+//		return true;
+//	}
 
 }
