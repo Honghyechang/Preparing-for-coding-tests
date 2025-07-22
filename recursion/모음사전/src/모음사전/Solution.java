@@ -8,11 +8,11 @@ import java.util.List;
 public class Solution {
 	String str="AEIOU";
 	List<String> list=new ArrayList<String>();
-	public static void main(String[] args) {
-Solution s=new Solution();
-System.out.println( s.solution("EIO"));
-
-	}
+//	public static void main(String[] args) {
+//Solution s=new Solution();
+//System.out.println( s.solution("EIO"));
+//
+//	}
 	
 	public int solution(String word) {
 		

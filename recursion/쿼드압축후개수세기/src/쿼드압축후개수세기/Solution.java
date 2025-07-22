@@ -2,15 +2,15 @@ package 쿼드압축후개수세기;
 
 public class Solution {
 
-	public static void main(String[] args) {
-		
-		Solution s=new Solution();
-		// TODO Auto-generated method stub
-		int arr[][]= {{1,1,0,0},{1,0,0,0},{1,0,0,1},{1,1,1,1}};
-		int result[]=s.solution(arr);
-		System.out.println(result[0]+","+result[1]);
-		
-	}
+//	public static void main(String[] args) {
+//		
+//		Solution s=new Solution();
+//		// TODO Auto-generated method stub
+//		int arr[][]= {{1,1,0,0},{1,0,0,0},{1,0,0,1},{1,1,1,1}};
+//		int result[]=s.solution(arr);
+//		System.out.println(result[0]+","+result[1]);
+//		
+//	}
 	
 	public int[] solution(int arr[][]) 
 	{

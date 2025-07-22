@@ -7,12 +7,12 @@ public class Solution {
 	static List<int[]> list =new ArrayList<int[]>();//배열은 객체
 	
 
-	public static void main(String[] args) {
-		Solution s=new Solution();
-		s.solution(2);
-
-	}
-	
+//	public static void main(String[] args) {
+//		Solution s=new Solution();
+//		s.solution(2);
+//
+//	}
+//	
 	public int[][] solution(int n){
 	
 		hanoi(n,1,3);
