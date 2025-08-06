@@ -5,20 +5,20 @@ import java.util.Arrays;
 public class Solution {
 
 	public static int memory[][]=new int[501][501];
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Solution s=new Solution();
-		int n=s.solution(new int[][] {
-			{7}, 
-			{3, 8}, 
-			{8, 1, 0}, 
-			{2, 7, 4, 4}, 
-			{4, 5, 2, 6, 5}
-			}
-		);
-		System.out.println(n);
-
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Solution s=new Solution();
+//		int n=s.solution(new int[][] {
+//			{7}, 
+//			{3, 8}, 
+//			{8, 1, 0}, 
+//			{2, 7, 4, 4}, 
+//			{4, 5, 2, 6, 5}
+//			}
+//		);
+//		System.out.println(n);
+//
+//	}
 	
 	public int solution(int triangle[][]) {
 		for(int i=0; i<memory.length; i++) {
