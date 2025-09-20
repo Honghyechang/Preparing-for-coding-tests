@@ -8,12 +8,12 @@ public class Solution {
 	int studentCount;
 	int max=Integer.MIN_VALUE;
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Solution s=new Solution();
-		s.solution(new int[][] {{40, 10, 10}, {20, 5, 0}, {30, 30, 30}, {70, 0, 70}, {100, 100, 100}});
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//		Solution s=new Solution();
+//		s.solution(new int[][] {{40, 10, 10}, {20, 5, 0}, {30, 30, 30}, {70, 0, 70}, {100, 100, 100}});
+//	}
     public int solution(int[][] ability) {
     	
     	 sportCount=ability[0].length;
