@@ -8,39 +8,51 @@ public class Solution {
 //		Solution s=new Solution();
 //		s.solution(2, 3);
 //	}
+//	
 	
 	  public long solution(int r1, int r2) {
-		    long arrSize=r2+1;
-		    System.out.println("arrSize : "+arrSize);
-		    //int arr[][]=new int[arrSize][arrSize];
 		    
-		    double distance=(double)r2-r1;
+		  
+		   double rTwo=Math.pow(r2, 2);
+		   double rOne=Math.pow(r1, 2);
+		   
+		    //x축의 개수를 모두 구하기
+		    long xSize=r2+1;
 		    
-		    int count=0;
-		    int zero=0;
+		    long count=0;
+		    //int zeroCount=0;
 		    
-		    
-		    for(long i=0; i<arrSize;i++) {
-		    	for(long j=0; j<arrSize; j++) {
-		    		
-		    		double distan=Math.sqrt( Math.pow(i-0, 2)+Math.pow(j-0, 2));
-		    		if(distan>=r1 &&distan <=r2) {
-		    			
-		    			count++;
-		    			
-		    			if(i==0 || j==0) {
-		    				zero++;
-		    			}
-		    		}
-		    		
+		    for(int i=0; i<xSize; i++) {
+		    	
+		    	int maxRount=(int)Math.floor(Math.sqrt( rTwo - Math.pow(i,2) ));
+		    	
+		    	int minRount;
+		    	if(i>=r1) {
+		    		minRount=0;
+		    	}else {
+		    		minRount=(int)Math.ceil(Math.sqrt( rOne - Math.pow(i,2) ));
 		    	}
+		    	
+		    	int pointCount=maxRount-minRount+1;
+		    	
+		    	count+=pointCount;
+		    	
+		    //	System.out.println("i가 " +i+"일 때 +"+pointCount+"가 되어 count : "+count);
+//		    	if(minRount==0) {
+//		    		zeroCount++;
+//		    	}
+//		    	
 		    }
+//		    System.out.println("count : "+count);
+//		    System.out.println("zeroCount : "+zeroCount);
+//		    System.out.println("count*4 - zeCount*4 : "+(count*4-zeroCount*4));
+//		    
+//		    
 		    
-		    System.out.println("count : "+count+ " , zero : "+zero);
-		    System.out.println("count*4 - (zero*2) = "+((count*4)-(zero*2)));
 		    
-		    long answer=((count*4)-(zero*2));
-		    return answer;
+		    
+		    return (count*4-((r2-r1+1)*4));
+		    
 		    
 		   
 	    }
