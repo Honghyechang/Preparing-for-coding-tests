@@ -9,14 +9,14 @@ import java.util.Set;
 
 public class Solution {
 
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//
-//		Solution s=new Solution();
-//		s.solution(new int[][]{{0, 0, 0, 1, 1, 1, 0, 0}, {0, 0, 0, 0, 1, 1, 0, 0}, {1, 1, 0, 0, 0, 1, 1, 0}, {1, 1, 1, 0, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 1, 1}});
-//		
-//	}
-//	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Solution s=new Solution();
+		s.solution(new int[][]{{0, 0, 0, 1, 1, 1, 0, 0}, {0, 0, 0, 0, 1, 1, 0, 0}, {1, 1, 0, 0, 0, 1, 1, 0}, {1, 1, 1, 0, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 1, 1}});
+		
+	}
+	
 	 public int solution(int[][] land) {
 	        int answer = bfs(land);
 	        System.out.println(answer);
