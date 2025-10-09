@@ -5,13 +5,6 @@ import java.util.stream.Collectors;
 
 public class Solution {
 
-//		public static void main(String[] args) {
-//		Solution s=new Solution();
-//		String st=s.solution( new int[] {6,10,2});
-//		
-//		
-//			System.out.println(st);
-//		}
 
 		public String solution(int numbers[]) {
 			
