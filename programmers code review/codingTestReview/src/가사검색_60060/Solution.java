@@ -22,10 +22,7 @@ public class Solution {
 		//abcde fghij klmno pqrst uvwxy z 26개
 		
 		
-		for(String word : words) {
-			
-			
-			
+		for(String word : words) {	
 			TrieNode current=root;
 			for(int i=0; i<word.length(); i++) {
 				char ch=word.charAt(i);
