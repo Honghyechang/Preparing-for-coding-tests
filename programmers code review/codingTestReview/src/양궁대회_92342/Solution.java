@@ -6,18 +6,18 @@ public class Solution {
 
 	int answer[]=null;
 	int max=0;
-	public static void main(String[] args) {
-	// TODO Auto-generated method stub
-	
-	Solution s=new Solution();
-//	int answer[]=s.solution(5, new int[] {2,1,1,1,0,0,0,0,0,0,0});
+//	public static void main(String[] args) {
+//	// TODO Auto-generated method stub
+//	
+//	Solution s=new Solution();
+////	int answer[]=s.solution(5, new int[] {2,1,1,1,0,0,0,0,0,0,0});
+////	System.out.println(Arrays.toString(answer));
+////	answer=s.solution(9, new int[] {0,0,1,2,0,1,1,1,1,1,1});
+////	System.out.println(Arrays.toString(answer));
+//	int answer[]=s.solution(10, new int[] {0,0,0,0,0,0,0,0,3,4,3});
 //	System.out.println(Arrays.toString(answer));
-//	answer=s.solution(9, new int[] {0,0,1,2,0,1,1,1,1,1,1});
-//	System.out.println(Arrays.toString(answer));
-	int answer[]=s.solution(10, new int[] {0,0,0,0,0,0,0,0,3,4,3});
-	System.out.println(Arrays.toString(answer));
-
-}
+//
+//}
 
  public int[] solution(int n, int[] info) {
 	 recursion(n,0,info,new int[11],0,0);
@@ -53,8 +53,10 @@ public class Solution {
 	 
 	 if(depth==info.length) {
 		 int win=lionScore-apeachScore;
-		 if(win>=max) {
-			 System.out.println(Arrays.toString(lion));
+		 if(win>=max && win>0) {
+			 
+			 
+			// System.out.println(Arrays.toString(lion));
 			 if(max<win) {
 				 answer=lion.clone();
 				 max=win;
